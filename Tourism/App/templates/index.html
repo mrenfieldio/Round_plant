@@ -1,0 +1,464 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %} 
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Teko:wght@500&display=swap" rel="stylesheet">
+
+<link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+<link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+  
+  
+  {%  block content %}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner inner12">
+          <div class="carousel-item  carousel-image bg-img-1">
+            
+            <h1 class="text-light pic1">A change of latitude would help my attitude.</h1>
+            <!-- <img class="whats" src="./icons8-whatsapp-50.png" alt=""> -->
+            <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item  carousel-image bg-img-2">
+            
+            <h1 class="text-light pic1">A change of latitude would help my attitude.</h1>
+            <!-- <img class="whats" src="./icons8-whatsapp-50.png" alt=""> -->
+            <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item active carousel-image bg-img-3">
+          
+            <h1 class="text-light pic1">Take only memories, leave only footprints..</h1>
+            <!-- <img class="whats" src="./icons8-whatsapp-50.png" alt=""> -->
+            <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 choice shadow">
+        <p class="text-uppercase  text-dark text-center text123"><b>Unforgettable Travel Experience</b> </p>
+        <p class="text-uppercase text-dark text-center text123">Await-Choose Your Package</p>
+       
+      </div>
+       
+     
+
+      <div class="container">
+        <div class="row pt-5 pb-5">
+            {% for i in db %}
+              <div class="col-lg-4 col-md-4 col-sm-4 " > 
+                <a  href="{% url 'base'  i.pk  %}"  class="tour-package-item tour-location-item"> 
+                <div class="wrapper">
+                
+                <img class="w-100 overla "  src="{{i.images.url}}" alt="">
+                <div class="overlaying">
+                  <i class="fa fa-link text " aria-hidden="true" style="font-size:30px;"></i>
+                  <!-- <div class="text">Click Me</div> -->
+                </div>
+              </div>
+            <div class="box">
+                 <h5 class="text-center">{{i.place}}</h5>
+                 
+            </div>
+          </a>
+         
+            </div>
+       
+            {% endfor %}
+       
+  
+  </div>
+            
+    </div>
+      <div class="container-fluid best shadow" style="background-color: #008CBA;">
+        <div class="container pt-3 pb-3 shadow">
+          <div class="row text-white best" >
+            <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.1s" style="border-right: 1px solid white;">
+              <div class="row ">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <img src="{% static 'images/icons8-user-groups-50 (1).png' %}" alt="">
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10  ">
+                  <h4 class="text-white">5000+ <br> Happy Customers</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.3s" style="border-right: 1px solid white;">
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <img src="{% static 'images/icons8-award-50 (1).png' %}" alt="">
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                  <h4 class="text-white">Best Price<br> In Industry </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.5s" style="border-right: 1px solid white;"">
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <img src="{% static 'images/icons8-timer-50.png' %}" alt="">
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                  <h4 class="text-white">24x7 <br>Customer Services</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  <img src="{% static 'images/icons8-block-50.png' %}" alt="">
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                  <h4 class="text-white">Hassle Free <br> Booking</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+        
+            <main class="space">
+              <div class="container main2 pt-5 pb-5 ">
+                <div class="row pt-5 pb-5 shadow">
+                  <div class="col-lg-6 col-md-6 shadow wow fadeInUp " data-wow-delay="0.1s">
+                    <h1>Discover 360 <br> Planet Tours And packages</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta dicta ducimus neque nemo nesciunt, assumenda ut nihil deserunt fuga? Aliquid odio quia repellat laboriosam consequatur quisquam voluptate cum culpa soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique explicabo voluptas, vero dolore perferendis totam, quisquam commodi tempora modi quae quasi, consectetur itaque esse impedit reiciendis doloremque possimus? Quia? . <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique explicabo voluptas, vero dolore perferendis totam, quisquam commodi tempora modi quae quasi, consectetur itaque esse impedit reiciendis doloremque possimus? Quia? Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste quia velit, error deserunt accusantium quasi dolorum nulla neque officia nisi possimus optio in cum explicabo! Dolorem quia totam iure
+                    </p>
+                    <button class="btn btn-dark mt-5">Read more</button>
+                  </div>
+                  <div class="col-lg-6 col-md-6 shadow wow fadeInUp" data-wow-delay="0.5s">
+                    <img class="pic4 w-100" src="{% static 'images/beautiful-collage-travel-concept.jpg' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </main>
+            <section class="pt-5">
+              <h1 class="text-center">Testimonials:Hear What <br> Our Delighted Customers Have To Say</h1>
+
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators ">
+                  <button type="button" data-bs-target="#carouselExampleDark " data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2" class=" bg-dark"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3" class=" bg-dark"></button>
+                </div>
+                <div class="carousel-inner pb-5">
+                  <div class="carousel-item active">
+                    <div class="container">
+                      <div class="row pt-5 d-flex pb-3">
+                        
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face1.jpeg' %}" alt="">
+                                 <h5 class="px-3">John Doe <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face2.jpeg' %}" alt="">
+                                 <h5 class="px-3">Jack Jhons <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face3.jpeg' %}" alt="">
+                                 <h5 class="px-3">Martin <br><span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <div class="row pt-5 d-flex pb-3">
+                        
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face1.jpeg' %}" alt="">
+                                 <h5 class="px-3">John Doe <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face2.jpeg' %}" alt="">
+                                 <h5 class="px-3">Jack Jhons <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face3.jpeg' %}" alt="">
+                                 <h5 class="px-3"> <br>Martin <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <div class="row pt-5 d-flex pb-3">
+                        
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face1.jpeg' %}" alt="">
+                                 <h5 class="px-3">John Doe <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face2.jpeg' %}" alt="">
+                                 <h5 class="px-3">Jack Jhons <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                        <div class="col-lg col-md testmon me-3">
+                          
+                          <div class="pb-3">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                          </div>
+                             poda ipsum dolor sit amet consectetur adipisicing elit. Aut officiis sapiente eius deserunt praesentium excepturi ipsam porro labore numquam ut beatae non ratione corporis quisquam quasi, provident commodi ipsa voluptas. <br> <br>
+                            <hr>
+                             <div class="d-flex">
+                              <img class="pic6" src="{% static 'images/face3.jpeg' %}" alt="">
+                                 <h5 class="px-3">Martin <br> <span class="text-success">location</span> </h5>
+                            </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark me-5" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark ms-5" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+
+                <main>
+                   <div class="container grad1">
+                    <div class="row px-5 py-5">
+                      <div class="col-lg-4 form ">
+                        <h1 class="main3 text-white text-center pt-5">Quick Inquiry</h1>
+                        
+                        
+                        <form action="" class="text-center" method="post" >
+                        {% csrf_token %}
+    
+                          <input type="text" placeholder="Name" name="name" class="formin text-center mt-3" required>
+                          <input type="text" placeholder="Email" name="email" class="formin text-center mt-3" required>
+                          <input type="text" placeholder="Phone" name="phone" class="formin text-center mt-3" required>
+                          <input type="text" placeholder="Subject" name="subject" class="formin text-center mt-3" required>
+                          <textarea cols="40" rows="10" class="formin mt-3 text-center" aria-invalid="false" placeholder="Message" name="message" required ></textarea>
+                          <input type="submit" class="btn btn-light mt-2 w-50 text-light bg-dark" value="Submit">
+
+                          {% if messages %}
+                        {% for message in messages %}
+                        {% if message.tags == "error" %}
+                        <div class="alert alert-danger" role="alert">
+                          {{message}}
+                        </div>
+                        {% else %}
+                        <div class="alert alert-success" role="alert">
+                         {{message}}
+                        </div>
+                        {%endif%}
+                        {%endfor%}
+                        {%endif%}
+                        </form>
+                      </div>
+                      
+                      <div class="col-lg-8  px-5">
+                       
+                         <h1 class="bot" >Exciting News <br> And upcoming Events</h1>
+                         <div class="row pt-5 ms-3">
+                          {% for i in nb%}
+                          <div class="col-lg-6 col-md-6 px-4">
+                            <a class="one" href="{% url 'event1'  i.pk  %}">
+                              <div class="row">
+                                <div class="wrapper -2">
+                                  <img src="{% static 'images/ammie-ngo-vcu-OZBxxRk-unsplash.jpg' %}" class=" w-100 overla mx-0" alt="..">
+                                  <div class="overlaying">
+                                    <i class="fa fa-link text " aria-hidden="true" style="font-size:30px;"></i>
+                                    <!-- <div class="text">Click Me</div> -->
+                                  </div>
+                                </div>
+                              </div>
+                                <div class="row pt-2">
+                                  <div class="col-lg-11 px-2 ">
+                                    <p class="one">{{i.message}}
+                                       </p> 
+                                  </div>
+                                  <div class="col-lg-1">
+                                    <i class="fa fa-angle-right " style="font-size: 32px;"></i>
+                                  </div>
+                                </div>
+                              
+                            </a>
+                            
+                          </div>
+                          {%endfor%}
+                         
+                         </div>
+                        
+                      </div>
+                      
+                    </div>
+                   </div>
+                </main>
+
+               
+               
+        
+           <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+           <script src="../static/lib/wow/wow.min.js"></script>
+           <script src="../static/lib/easing/easing.min.js"></script>
+           <script src="../static/lib/waypoints/waypoints.min.js"></script>
+           <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+          
+       
+           <!-- Template Javascript -->
+           <script src="{% static 'main.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+{% endblock %}
+    </body>
+</html>

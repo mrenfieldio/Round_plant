@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+ 
+/* .tour-package-item{
+	width: 100%;
+	position: relative;
+	color: var(--headingColor);
+}
+
+.tour-package-item:hover{
+	text-decoration: none;
+}
+
+.tour-package-item .tour-footer{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: yellow;
+
+} */
+
+/* .tour-package-item .tour-footer h6{
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	color: var(--textcolor);
+	line-height: 45px;
+}
+
+.tour-package-item .tour-footer h6 i{
+	margin-right: 5px;
+}
+
+.tour-package-item .tour-footer .row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.tour-package-item .tour-footer .row .col-lg-6{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.tour-package-item .tour-footer .row .col-lg-6:first-child{
+	border-right: 1px solid #cbdfec;
+} */
+
+/* .tour-package-item .tour-imagecon{
+	width: 100%;
+	position: relative;
+	height: 260px;
+	background-color: #008CBA;
+	overflow: hidden;
+}
+
+.tour-package-item .tour-imagecon i{
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin-left: -12px;
+	margin-top: -12px;
+	z-index: 10;
+	color: var(--LightBgColor);
+	font-size: 24px;
+	transition-duration: 0.3s;
+	opacity: 0;
+}
+
+.tour-package-item:hover .tour-imagecon i{
+	opacity: 1;
+	top: 50%;
+	margin-left: -12px;
+}
+
+.tour-package-item .tour-imagecon img{
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	transition-duration: 0.3s;
+}
+
+.tour-package-item:hover img{
+	opacity: 0.2;
+	transform: scale(1.2);
+} */
+
+/* .tour-package-item .tour-imagecon{
+    width: 100%;
+    position: relative;
+    height: 260px;
+    background:blue;
+    overflow: hidden;
+}
+.tour-package-item:hover .tour-imagecon i {
+    opacity: 1;
+    top: 50%;
+    margin-left: -12px;
+}
+.tour-package-item .tour-imagecon i {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -12px;
+    margin-top: -12px;
+    z-index: 10;
+    color: blue;
+    font-size: 24px;
+    transition-duration: 0.3s;
+    opacity: 0;
+}
+.tour-package-item:hover img {
+    opacity: 0.2;
+    transform: scale(1.2);
+}
+.tour-package-item .tour-imagecon img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition-duration: 0.3s;
+}
+img {
+    vertical-align: middle;
+    border-style: none; */
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.wrapper {
+	position: relative;
+	width: 350px;
+	background: radial-gradient(#111 50%, #000 100%);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+
+	display: block;
+}
+
+.wrapper img {
+	transform: scale(1.3);
+	transition: 0.3s ease-out;
+}
+
+.wrapper:hover img {
+	transform: scale(1.1) translateY(-20px);
+	opacity: 0.3;
+}
+
+.overlaying {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+}
+
+.text-h1 {
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all .3s ease-out;
+}
+
+.text-p {
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all .3s ease-out 0.2s;
+}
+
+.link-a {
+	display: inline-block;
+	background: crimson;
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 5px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all .3s ease-out 0.4s;
+}
+
+.overlaying .link-a:hover {
+	background: rgb(95, 199, 10);
+}
+
+.wrapper:hover .overlaying .text-h1 {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.wrapper:hover .overlaying .text-p {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.wrapper:hover .overlaying .link-a {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+</style>
+<body>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="col-lg-12 slick-slide slick-active" style="width: 410px;" tabindex="0" role="tabpanel" id="slick-slide01" data-slick-index="1" aria-hidden="false">
+        <a href="https://demo.ooly.in/roundplanet/packagecat/jakarta/" class="tour-package-item tour-location-item" tabindex="0">
+<div class="tour-imagecon">
+<i class="fa fa-link text-dark" style="top: 20%;left:50%;"></i>
+                    <img width="540" height="360" src="../../img/bhushan-sadani-sHlYyhfD5Hc-unsplash.jpg" class="attachment-large size-large wp-post-image" alt="Malaysia" decoding="async" loading="lazy">                         
+</div>
+<h5>jakarta</h5>
+</a>
+</div>
+
+<div class="tour-imagecon">
+	<i class="fa fa-link"></i>
+							<img width="540" height="360" src="https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu.jpg" class="attachment-large size-large wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu.jpg 1024w, https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu-300x200.jpg 300w, https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu-768x512.jpg 768w, https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu-500x333.jpg 500w, https://demo.ooly.in/roundplanet/wp-content/uploads/2023/11/image_processing20221111-4-elbtzu-800x534.jpg 800w" sizes="(max-width: 540px) 100vw, 540px">                                    </div>
+
+    -->
+
+
+	<div class="container">
+		<div class="wrapper">
+			<img src="https://pibig.info/uploads/posts/2021-06/1623123014_3-pibig_info-p-znachenie-vodi-v-prirode-priroda-krasivo-f-3.jpg" alt="Animated Card Hover Effect Html & CSS">
+			<div class="overlaying">
+				<h1 class="text-h1">the mountains</h1>
+				
+				<a class="link-a" href="#"> Read More</a>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

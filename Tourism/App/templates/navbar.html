@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    
+
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-globe me-3"></i>Round-Planet</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url 'about' %}" class="nav-item nav-link active mx-3">About Us</a>
+                <a href="{% url 'packages' %}" class="nav-item nav-link mx-3">Packages</a>
+                <a href="{% url 'events' %}" class="nav-item nav-link mx-3">News & Events</a>
+                <a href=" {% url 'gallery' %}" class="nav-item nav-link mx-3">Gallery</a>
+   
+            </div>
+            <a href=" {% url 'contact' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    {%  block content %}
+
+    {% endblock %}
+    <main class="footer">
+        <div class="container px-5 ">
+          <div class="row bro px-5 pt-3 pb-3">
+            <div class="col-lg-2 col-md-2 col-sm-2 px-5">
+              <img src="{% static 'images/download-icon.png' %}" alt="">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 ms-auto">
+              <h3 class="text-white">Download Our Informative Brochure</h3>
+              <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor cum saepe tenetur </p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 dwnd mt-3">
+                <div class="dwnd text-white"><i class="fa fa-download text-white">&nbsp;&nbsp;Download</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="container  ">
+          <div class="row pt-5">
+            <div class="col-3 pt-5">
+              <img class=" footpic" src="{% static 'images/footer-logo.png' %}" alt="">
+            </div>
+            <div class="col-3 text-white">
+              <h2 class="text-white">Quick Links</h2>
+              <ul class="footlist pt-3" >
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Packages</li>
+                <li>Gallery</li>
+                <li>Testimonials</li>
+                <li>contact US</li>
+              </ul>
+            </div>
+            <div class="col-3 text-white">
+              <h2 class="text-white">Our Package</h2>
+              <ul class="footlist pt-3" >
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Packages</li>
+                <li>Gallery</li>
+                <li>Testimonials</li>
+                <li>contact US</li>
+              </ul>
+            </div>
+            <div class="col-3 text-white">
+              <h2 class="text-white">Get In Touch</h2>
+              <ul class="footlist pt-3" >
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Packages</li>
+                <li>Gallery</li>
+                <li>Testimonials</li>
+                <li>contact US</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    
+   
+ <footer>
+  <div class="col-lg-12 bg-dark">
+    <!-- <div class="row  text-light"> -->
+     <p class="text-center text-white pt-3 py-3">All Right Reserved to @Nikhil@2002</p> 
+    <!-- </div> -->
+  </div>
+ </footer>
+</body>
+</html>

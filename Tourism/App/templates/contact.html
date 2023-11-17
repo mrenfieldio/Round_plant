@@ -1,0 +1,235 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link href="{% static 'style3.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="https://fontawesome.com/v5/icons/link?f=classic&s=solid">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Teko:wght@500&display=swap" rel="stylesheet">
+
+<link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+<link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  {%endblock%}
+    <title>Document</title>
+</head>
+<body>
+
+ {%block content%}
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner inner12">
+          <div class="carousel-item  carousel-image bg-img-1">
+           
+            <h1 class="text-light pic1">Contact Us</h1>
+            <img class="whats" src="./icons8-whatsapp-50.png" alt="">
+            <!-- <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div> -->
+          </div>
+          <div class="carousel-item  carousel-image bg-img-2">
+
+            <h1 class="text-light pic1">Contact Us</h1>
+            <img class="whats" src="./icons8-whatsapp-50.png" alt="">
+            <!-- <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div> -->
+          </div>
+          <div class="carousel-item active carousel-image bg-img-3">
+           
+            <h1 class="text-light pic1">Contact Us</h1>
+            <img class="whats" src="./icons8-whatsapp-50.png" alt="">
+            <!-- <div class="banner-btm-wrapper">
+              <div class="mouse-holder">
+                  <a href="base"></a>
+              </div>
+          </div> -->
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-lg-4 cp">
+                    <i class="fa fa-phone "></i>
+                    <img src="{% static 'images/rest-sunshine-atoll-bungalow-holiday.jpg' %}" class="d-block w-100" alt="..."> -->
+                <!-- </div>
+                <div class="col-lg-4 cp">
+                    <img src="{% static 'images/rest-sunshine-atoll-bungalow-holiday.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-lg-4 cp">
+                    <img src="{% static 'images/rest-sunshine-atoll-bungalow-holiday.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>  -->
+
+
+        <div class="container">
+        
+            <div class="row mt-5">
+                <div class="col-lg-4 cp">
+                    <div class="contact-item">
+                    <span><i class="fa fa-phone text-white"></i></span>
+                    <h4>Phone</h4>
+                    <p ><a class="text-dark" href="tel:+628568168293">+628568168293</a></p></div>
+                </div>
+                <div class="col-lg-4 cp">
+                    <div class="contact-item">
+                    <span><i class="fa fa-envelope text-white"></i></span>
+                    <h4>Email</h4>
+                    <p><a class="text-dark" href="mailto:info@rounddplanet.com">info@rounddplanet.com</a></p>                                    </div>
+                </div>
+                <div class="col-lg-4 cp">
+                    <div class="contact-item">
+                    <span><i class="fa fa-map-marker text-white"></i></span>
+                    <h4>Address</h4>
+                    <p>RVR3+G2 Kebon Kosong, Central Jakarta City, <br>
+    Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+
+
+        <main class="space">
+            <div class="contact-middle-section">
+
+           
+            <div class="container  pt-3 pb-3 ">
+              <div class="row pt-2 pb-5">
+                  <div class="col-lg-6 col-md-6">
+                      <img class="pic4 w-100 p-5" src="{% static 'images/rest-sunshine-atoll-bungalow-holiday.jpg' %}" alt="">
+                    </div>
+                <div class="col-lg-6 col-md-6  ">
+                  <h2 class=" pt-5">Send Us A Message</h2>
+                  <p>Please use the form below to send us a message, and we'll get back to you as soon as possible.</p>
+                  <div class="wpcf7 js" id="wpcf7-f133-o1" lang="en-US" dir="ltr">
+                    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                   
+                    <form action="" method="post" class="wpcf7-form init" aria-label="Contact form"  data-status="init" >
+                      {% csrf_token %}
+                      
+                    <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="133">
+                    <input type="hidden" name="_wpcf7_version" value="5.8.2">
+                    <input type="hidden" name="_wpcf7_locale" value="en_US">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f133-o1">
+                    <input type="hidden" name="_wpcf7_container_post" value="0">
+                    <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                    </div>
+                    <div class="row ">
+                      {% if messages %}
+                      {% for message in messages %}
+                      {% if message.tags == "error" %}
+                      <div class="alert alert-danger" role="alert">
+                        {{message}}
+                      </div>
+                      {% else %}
+                      <div class="alert alert-success" role="alert">
+                       {{message}}
+                      </div>
+                      {%endif%}
+                      {%endfor%}
+                      {%endif%}
+                        <div class="col-lg-6 col-md-6 ">
+                            <p ><span class="wpcf7-form-control-wrap" data-name="text-272"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required " aria-required="true" aria-invalid="false" placeholder="Your Name" value="" type="text" name="name" required></span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <p><span class="wpcf7-form-control-wrap" data-name="email-796"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email" required></span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <p><span class="wpcf7-form-control-wrap" data-name="text-274"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Phone" value="" type="text" name="phone" required></span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <p><span class="wpcf7-form-control-wrap" data-name="text-276"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="subject" required></span>
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p><span class="wpcf7-form-control-wrap" data-name="textarea-749"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea required" aria-invalid="false" placeholder="Message" name="message" required ></textarea></span>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <p><input class="wpcf7-form-controls wpcf7-submit has-spinner submbtn" type="submit" value="Send"><span class="wpcf7-spinner"></span>
+                            </p>
+                        </div>
+                    </div><div class="wpcf7-response-output" aria-hidden="true"></div>
+
+                  
+                    </form>
+                  
+                    </div>
+                </div>
+               
+              </div>
+            </div>
+        </div>
+          </main>
+
+          <section class="contact-btm-section">
+            <div class="container">
+                <div class="googlemap-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7910591759487!2d106.84994357554336!3d-6.158732093828436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5f8d2786d8b%3A0x9047a9426544a89f!2sRound%20D'%20Planet!5e0!3m2!1sen!2sin!4v1698404320147!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+         
+        
+           
+           
+                           
+               
+        
+           <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+           <script src="../static/lib/wow/wow.min.js"></script>
+           <script src="../static/lib/easing/easing.min.js"></script>
+           <script src="../static/lib/waypoints/waypoints.min.js"></script>
+           <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+          
+       
+           <!-- Template Javascript -->
+           <script src="{% static 'main.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+{%endblock%}
+    </body>
+</html>
